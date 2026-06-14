@@ -1,0 +1,134 @@
+MIIEpAIBAAKCAQEA358EXtnCgy4+hLXsqL7O7rYZQbwc2Y5z2u03CUeS3pouRF9oX97HoZ4wCvH2qUVPHCrNkkqF7GIeGard6PughpkbpbGBSO5Uz0461I48uHelhldKsde+qaBuIl+8a8DVKOWErOs9bSRMUpKBQX56JaLWZ5AR5zar+UeW/PD8gpHE6TjDIVuLNauTQXNRCIK+GkSaxZ0JYjCne66x4y3RPsV/iRC1XejB5ZNvLMphyUQdrAHUE+6jIQFGz0rE+t2EvDcRrccQPgQnVJkWllUBlm1EFB+4f/s7d5ekjSeg6AC4NWhq9wKqXb6MDgPzCRSyDbP/Tq/4KQGO33isPMPclwIDAQABAoIBAQCzDiT1ve+eEl1E7la9F2uigHTgybtgCEyENAUpjQHw9Auv+6UbfsrigkN9wBj9mN2rdCp+xOVPTZFEhCiD8Ver7tTQa71VpGCMTduVbv73xfXoB+VrWZD1Sdxl8bpxnUoRIRaHTyU0SyhBxcVxp9AuaqC69AUh2gkB5WzkxCGseYQOTZ1ZswAtMvGmjgUrzKMQtFQwF9GBkZeN7laSygqm7FJYWTG/ygnoIBTj7YDRXeAXdzxJ1a5/Sk3ZF4TJ4Dh3y8JotONHDiuocnf86X2WJd7qknVDKN2plTozaZdVS0UznSr0OXWHidmskVzEf2F+API7u2z0IlzN3jZcgp2hAoGBAP5CjtE20My+WpOYC3SZSWcN9HSKB83QflcEeYqgoYh3XVlnk/zJCN8vk3wbKi27s7k7Ts4HGpsa2x0vRympFAawvcS3kL1iheXm2anAvDD/0k9cvFU9LM5uJrXlD/q6l2d2zwkJLKSZsQUbSD59prsQmf5F+CHI4l79NbfdEzYTAoGBAOEmyFRYtunxDAr968te4dihxXYUpzJuEacW1v9UV2opgdKg5O7xHeRM7a4Ch7DFO7IjHb7C65otQCY2jjQG2YBs54/LOhwBNMD6FGyzZtj7H3fYnQMv7R3vnEXwLUvBpOXknqiA1KDlDbJksqT2sg7O4Zu8N2Uexho99gzPp5/tAoGATXAH/0Aqp7Dx9THBi2mEKZbedP/1EIIHeIksW0RA7kcsbyZUtBCmWxMqYAoF9pfMTQX7IlSXjdXIFkNn8RBFwSPjKB6gPo3bKgH9GO5SYroHW5Rq56sSEm0J7SwuibZ6llBhDed1aUxF1cBRaHbsaNzNidvVjrSX/UYxLiZuy3ECgYAD6pzJetGTuDGxb0FOxFPBZO7+YtWVtvxvn6IVxu3OVvJ/K3VQArm2YvAverPJi2TCcIHv84wNnoPjJkfK9+OIrFxK0AouuoakZLU+PtCnLZcaipYQnCDPyH87aDYhfzjTFur7m2IXemSGmeHRpMjsIQUjpF6CT8q6YiGJj4Mm8QKBgQDwEzmDJ4v0DmyYu46LV5yasYcvHKVs9qcSi/ETEHd9HM7oC0bWG9gDkbzBo5K6tm8Ca4rldKemqHJ48rFm45z59KjKdoq/HYxfQSEjvKqsd5ZlI9mZUTLdpt2B5TsMniDXUuXaTnWcNuZ/hvjbA4BlebcZ9J5h2dqXDlZujqCnfQ==<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GhamTech SRL Interactive Presentation</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f4f6f9; color: #1e293b; margin: 0; padding: 20px; }
+        .wrapper { max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 8px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .header { background-color: #0f172a; padding: 30px; text-align: center; color: #ffffff; }
+        .logo { font-size: 24px; font-weight: 800; letter-spacing: 1px; color: #38bdf8; text-decoration: none; }
+        .intro-text { padding: 30px 30px 10px 30px; font-size: 16px; line-height: 1.6; }
+        
+        /* Interactive Tab Styling */
+        .interactive-container { padding: 0 30px 30px 30px; }
+        .tab-menu { display: flex; justify-content: space-between; margin-bottom: 20px; gap: 8px; }
+        .tab-label { flex: 1; text-align: center; background: #f1f5f9; padding: 12px 6px; font-size: 13px; font-weight: 600; border-radius: 6px; cursor: pointer; border: 1px solid #cbd5e1; transition: all 0.2s ease; display: block; }
+        .tab-label:hover { background: #e2e8f0; }
+        
+        /* Hide Radio Buttons completely */
+        .tab-radio { display: none !important; position: absolute; opacity: 0; }
+        
+        /* Content Display Logic */
+        .tab-content { display: none; background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 6px; line-height: 1.6; }
+        
+        #tab1:checked ~ .tab-menu .label1 { background: #38bdf8; color: #0f172a; border-color: #38bdf8; }
+        #tab1:checked ~ .content-container #content1 { display: block; }
+        
+        #tab2:checked ~ .tab-menu .label2 { background: #38bdf8; color: #0f172a; border-color: #38bdf8; }
+        #tab2:checked ~ .content-container #content2 { display: block; }
+        
+        #tab3:checked ~ .tab-menu .label3 { background: #38bdf8; color: #0f172a; border-color: #38bdf8; }
+        #tab3:checked ~ .content-container #content3 { display: block; }
+
+        .btn-cta { display: inline-block; background: #0f172a; color: #ffffff !important; text-decoration: none; padding: 12px 24px; font-weight: bold; border-radius: 6px; margin-top: 15px; font-size: 14px; text-align: center; }
+        .btn-cta:hover { background: #1e293b; }
+        
+        /* Comparison Table Styling */
+        .matrix-table { width: 100%; border-collapse: collapse; margin-top: 25px; font-size: 13px; }
+        .matrix-table th { background: #0f172a; color: white; padding: 10px; text-align: left; }
+        .matrix-table td { padding: 10px; border-bottom: 1px solid #e2e8f0; }
+        .matrix-table tr:nth-child(even) { background: #f8fafc; }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <!-- Header -->
+    <div class="header">
+        <a href="https://ghamtech.com" class="logo">GHAMTECH SRL</a>
+        <div style="font-size: 14px; color: #94a3b8; margin-top: 5px;">Enterprise Infrastructure Engineers</div>
+    </div>
+
+    <!-- Intro Text -->
+    <div class="intro-text">
+        <p><strong>Hi [First Name],</strong></p>
+        <p>Most enterprises optimize their software stacks but ignore severe physical bottlenecks hiding inside their hardware layers. Having optimized site support, network topologies, and high-density rack engineering for <strong>two global multi-national corporations</strong>, we eliminate these risks completely.</p>
+        <p><strong>Click on your company's primary infrastructure risk below</strong> to reveal our targeted optimization strategy directly inside this email:</p>
+    </div>
+
+    <!-- Interactive Component Box -->
+    <div class="interactive-container">
+        
+        <input type="radio" name="tabs" id="tab1" class="tab-radio" checked>
+        <input type="radio" name="tabs" id="tab2" class="tab-radio">
+        <input type="radio" name="tabs" id="tab3" class="tab-radio">
+
+        <!-- Navigation Buttons -->
+        <div class="tab-menu">
+            <label for="tab1" class="tab-label label1">⚠️ Server Overheating</label>
+            <label for="tab2" class="tab-label label2">⚙️ Software Friction</label>
+            <label for="tab3" class="tab-label label3">🌐 Site Delays</label>
+        </div>
+
+        <!-- Content Area -->
+        <div class="content-container">
+            <div id="content1" class="tab-content">
+                <h4 style="margin-top:0; color:#0f172a;">The Risk: Thermal Bottlenecks & Wasted U Space</h4>
+                <p style="font-size:14px; color:#475569;">Poorly arranged server racks trap heat pockets, choking hardware performance and forcing premature footprint expansion.</p>
+                <p><strong>GhamTech Resolution:</strong> We execute geometric racking, stacking, and cable rearrangements designed to optimize airflow and maximize high-density space efficiency.</p>
+                <a href="https://cal.com/gahmtech-technical-review-qtisqg/15min" class="btn-cta">Claim Free Video Rack Audit →</a>
+            </div>
+            
+            <div id="content2" class="tab-content">
+                <h4 style="margin-top:0; color:#0f172a;">The Risk: Fragmented Systems & Legacy Code</h4>
+                <p style="font-size:14px; color:#475569;">Rigid, off-the-shelf software tools that fail to properly communicate with your underlying hardware topology.</p>
+                <p><strong>GhamTech Resolution:</strong> We build tailored software systems and web apps engineered completely from scratch to align with your logistical realities.</p>
+                <a href="https://cal.com/gahmtech-technical-review-qtisqg/15min" class="btn-cta">Request Custom Software Roadmap →</a>
+            </div>
+            
+            <div id="content3" class="tab-content">
+                <h4 style="margin-top:0; color:#0f172a;">The Risk: Disconnected Field Infrastructure</h4>
+                <p style="font-size:14px; color:#475569;">Slow incident resolution timelines due to unmapped corporate networks and slow local site dispatching.</p>
+                <p><strong>GhamTech Resolution:</strong> Proactive network support, infrastructure counseling, and 24/7 localized site maintenance modeled on global enterprise SLAs.</p>
+                <a href="https://cal.com/gahmtech-technical-review-qtisqg/15min" class="btn-cta">Book Infrastructure Consultation →</a>
+            </div>
+        </div>
+
+        <!-- Comparison Table Component -->
+        <table class="matrix-table">
+            <thead>
+                <tr>
+                    <th>Capability</th>
+                    <th>Standard IT</th>
+                    <th>GhamTech SRL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Pedigree</strong></td>
+                    <td>Local Offices</td>
+                    <td><strong>2 Global Corporations</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Rack Layout</strong></td>
+                    <td>Basic Setup</td>
+                    <td><strong>Airflow Optimized</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Software</strong></td>
+                    <td>Resellers</td>
+                    <td><strong>Bespoke Builders</strong></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p style="font-size: 12px; color: #94a3b8; text-align: center; margin-top: 25px;">
+            Email not displaying correctly? <a href="https://github.io" style="color: #38bdf8;">Click here to view the web-interactive version</a>.
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
